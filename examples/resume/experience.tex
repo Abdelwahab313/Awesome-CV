@@ -12,15 +12,32 @@
 %---------------------------------------------------------
   \cventry
     {Senior Software Engineer} % Job title
-    {Dailymealz} % Organization
-    {Riyadh, Saudi Arabia} % Location
-    {Dec. 2021 - Present} % Date(s)
+    {OnTheGoSystems} % Organization
+    {Remote (Hong Kong)} % Location
+    {Dec. 2024 - Sep. 2026} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Led a team of 5 developers in implementing a background location check-in system for the driver app, improving route efficiency by 25\%.}
-        \item {Collaborated with cross-functional teams to ensure seamless integration of third-party tools, resulting in an enhanced user experience and reduced downtime.}
-        \item {Built automated build pipeline on App Center for direct store deployment and internal testing, which reduce time to market by 80\%.}
-        \item {Increased system Observability by adding monitors on main flows using Datadog and OpenTelemetry stack, which contributed to decrease Mean Time To Resolve by 30\%.}
+        \item {Moved the product off a single provisioned EC2 host onto ECS Fargate, sizing the worker fleet from a capacity study that measured 12,500 jobs across 12 container and worker configurations, then wrote the Terraform and the deploy pipeline underneath it.}
+        \item {Replaced ECS autoscaling with a queue-depth autoscaler on Lambda that drains workers rather than stopping them, because scale-in kills tasks abruptly and these jobs run from 30 seconds to 2 hours.}
+        \item {Traced an Aurora CPU saturation to a query plan that drove from a 46-row table into an index with no project prefix, examining 7.33M rows on every call, and throttled the broadcast that triggered it from 1,013 calls to about 100.}
+        \item {Owned metered billing, and found the 7-millisecond check-then-act race that had been silently pausing work inside it.}
+        \item {Built the provider-agnostic layer behind the translation and vision features over AWS Bedrock, OpenAI and Gemini, with ordered fallback chains and rate-limit responses reclassified as reschedules instead of failures.}
+        \item {Shipped an agent-driven triage platform for production exceptions, alone.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Senior Software Engineer} % Job title
+    {Dailymealz} % Organization
+    {Riyadh, Saudi Arabia} % Location
+    {Dec. 2021 - Dec. 2024} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Led a team of 5 developers in implementing a background location check-in system for the driver app, improving route efficiency.}
+        \item {Collaborated with cross-functional teams to integrate third-party tools, resulting in an enhanced user experience and reduced downtime.}
+        \item {Built an automated build pipeline on App Center for direct store deployment and internal testing, which reduced time to market.}
+        \item {Increased system observability by adding monitors on main flows using Datadog and OpenTelemetry, which contributed to a 30\% decrease in Mean Time To Resolve.}
         \item {Implemented a centralized module to track analytical events that make use of Observer Pattern and handle all integrated analytics events.}
       \end{cvitems}
     }
@@ -28,19 +45,17 @@
 %---------------------------------------------------------
   \cventry
     {Full-Stack Developer} % Job title
-    {Nformacy.} % Organization
+    {Nformacy} % Organization
     {Cairo, Egypt} % Location
     {Oct. 2020 - Dec. 2021} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
         \item {Led development from business requirements to deployment, including backend and frontend.}
-        \item {Designed and implemented automated BDD tests using Cypress, improving test coverage by more than 70\%.}
+        \item {Designed and implemented automated BDD tests using Cypress, improving test coverage.}
         \item {Migrated existing web applications to support the SaaS model which enhanced the product to be more market fit.}
-        \item {Implemented an internal calendar system for mentor availability and
-customer booking.}
-        \item {Ensured interoperability with third-party applications (Zoom,
-ClickUp, calendar)}
-        \item {Managed cloud infrastructure and deployment pipelines}
+        \item {Implemented an internal calendar system for mentor availability and customer booking.}
+        \item {Ensured interoperability with third-party applications (Zoom, ClickUp, calendar).}
+        \item {Managed cloud infrastructure and deployment pipelines.}
       \end{cvitems}
     }
 
@@ -54,21 +69,20 @@ ClickUp, calendar)}
       \begin{cvitems} % Description(s) of tasks/responsibilities
         \item {Worked in a self-organizing team to build high-quality software using Extreme Programming principles.}
         \item {Developed across multiple platforms: React Native for mobile, Ruby on Rails, Java Spring for backend, and React for frontend.}
-        \item {Mentored teams in adopting Extreme Programming (XP) and Agile practices, resulting in a 30\% increase in delivery efficiency and a significant reduction in technical debt.}
+        \item {Mentored teams in adopting Extreme Programming (XP) and Agile practices, which shortened delivery cycles and reduced technical debt.}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
     {Software Engineer} % Job title
-    {Fikr Labs.} % Organization
+    {Fikr Labs} % Organization
     {Cairo, Egypt} % Location
     {Jan. 2018 - Aug. 2018} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
         \item {Developed software using TDD with evolutionary design.}
-        \item {Delivered thin vertical slice delivery on many projects across
-multiple stacks: Java, React Native, React.js.}
+        \item {Delivered thin vertical slices on many projects across multiple stacks: Java, React Native, React.js.}
         \item {Maintained and refactored legacy code base using automated tests which provide a safety net and enhanced quality.}
       \end{cvitems}
     }
