@@ -17,12 +17,12 @@
     {Dec. 2024 - Sep. 2026} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Moved the product off a single provisioned EC2 host onto ECS Fargate, sizing the worker fleet from a capacity study that measured 12,500 jobs across 12 container and worker configurations, then wrote the Terraform and the deploy pipeline underneath it.}
+        \item {Built much of the translation engine layer across Claude on Bedrock, OpenAI and Gemini, with fallback chains when a provider fails.}
+        \item {Migrated the product from a single EC2 host onto ECS Fargate, then owned that platform and its Terraform.}
         \item {Replaced ECS autoscaling with a queue-depth autoscaler on Lambda that drains workers rather than stopping them, because scale-in kills tasks abruptly and these jobs run from 30 seconds to 2 hours.}
-        \item {Traced an Aurora CPU saturation to a query plan that drove from a 46-row table into an index with no project prefix, examining 7.33M rows on every call, and throttled the broadcast that triggered it from 1,013 calls to about 100.}
-        \item {Owned metered billing, and found the 7-millisecond check-then-act race that had been silently pausing work inside it.}
-        \item {Built the provider-agnostic layer behind the translation and vision features over AWS Bedrock, OpenAI and Gemini, with ordered fallback chains and rate-limit responses reclassified as reschedules instead of failures.}
-        \item {Shipped an agent-driven triage platform for production exceptions, alone.}
+        \item {Owned credits and billing correctness for a metered LLM product, then replaced its scattered credit checks with one authorization architecture.}
+        \item {Wrote the ISO 27001 audit checklist and the risk profiles behind it, then built the disaster recovery and data loss prevention programs to a documented 2-hour RTO and 15-minute RPO.}
+        \item {Shipped an agent-driven triage platform for production exceptions, then extended it to adjudicate support claims.}
       \end{cvitems}
     }
 
@@ -38,7 +38,7 @@
         \item {Collaborated with cross-functional teams to integrate third-party tools, resulting in an enhanced user experience and reduced downtime.}
         \item {Built an automated build pipeline on App Center for direct store deployment and internal testing, which reduced time to market.}
         \item {Increased system observability by adding monitors on main flows using Datadog and OpenTelemetry, which contributed to a 30\% decrease in Mean Time To Resolve.}
-        \item {Implemented a centralized module to track analytical events that make use of Observer Pattern and handle all integrated analytics events.}
+        \item {Implemented a centralized module to track analytical events.}
       \end{cvitems}
     }
 
@@ -52,7 +52,7 @@
       \begin{cvitems} % Description(s) of tasks/responsibilities
         \item {Led development from business requirements to deployment, including backend and frontend.}
         \item {Designed and implemented automated BDD tests using Cypress, improving test coverage.}
-        \item {Migrated existing web applications to support the SaaS model which enhanced the product to be more market fit.}
+        \item {Migrated existing web applications to support the SaaS model which enhanced the product to be a better market fit.}
         \item {Implemented an internal calendar system for mentor availability and customer booking.}
         \item {Ensured interoperability with third-party applications (Zoom, ClickUp, calendar).}
         \item {Managed cloud infrastructure and deployment pipelines.}
@@ -83,7 +83,7 @@
       \begin{cvitems} % Description(s) of tasks/responsibilities
         \item {Developed software using TDD with evolutionary design.}
         \item {Delivered thin vertical slices on many projects across multiple stacks: Java, React Native, React.js.}
-        \item {Maintained and refactored legacy code base using automated tests which provide a safety net and enhanced quality.}
+        \item {Maintained and refactored legacy code base using automated tests which provided a safety net and enhanced quality.}
       \end{cvitems}
     }
 
