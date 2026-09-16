@@ -34,11 +34,12 @@
     {Dec. 2021 - Dec. 2024} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Built the real-time order service behind a 100,000 daily-user delivery product, on Node.js and Socket.IO, pushing kitchen preparation, driver pickup and delivery status to mobile and web clients.}
+        \item {Integrated it with the Laravel monolith over SQS, consuming pushed order state changes and fanning them out to subscribed clients.}
+        \item {Served hot order state from Redis as the service's read source with MySQL behind it, keeping status fan-out off the transactional path.}
+        \item {Migrated the service from JavaScript to TypeScript.}
         \item {Led a team of 5 developers in implementing a background location check-in system for the driver app, improving route efficiency.}
-        \item {Collaborated with cross-functional teams to integrate third-party tools, resulting in an enhanced user experience and reduced downtime.}
-        \item {Built an automated build pipeline on App Center for direct store deployment and internal testing, which reduced time to market.}
         \item {Increased system observability by adding monitors on main flows using Datadog and OpenTelemetry, which contributed to a 30\% decrease in Mean Time To Resolve.}
-        \item {Implemented a centralized module to track analytical events.}
       \end{cvitems}
     }
 
