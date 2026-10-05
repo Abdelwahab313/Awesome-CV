@@ -14,17 +14,17 @@
     {Senior Software Engineer} % Job title
     {OnTheGoSystems} % Organization
     {Remote (Hong Kong)} % Location
-    {Dec. 2024 - Sep. 2026} % Date(s)
+    {Dec. 2024 - Present} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Built much of the Rails translation engine layer across Claude on Bedrock, OpenAI and Gemini: fallback chains when a provider fails, JSON repair, Langfuse tracing, and retries for the rate limits behind 65\% of review failures.}
+        \item {Built the Rails translation engine across Claude on Bedrock, OpenAI and Gemini: provider fallback chains, JSON repair, Langfuse tracing, and rate-limit retries for the errors responsible for 65\% of review failures.}
         \item {Shipped an agent-driven triage platform for production exceptions, solo in 12 weeks. Its pass/fail call lives in code, not the prompt, and caught three false passes when replayed on past incidents.}
-        \item {Built read-only production tools for AI agents, with a rollback wrapper, an audit log and a human-only write gate, then the investigator and critic agents that adjudicate support claims.}
+        \item {Built the production tooling AI agents run behind: read-only data access with a rollback wrapper, an audit log, and a human-only write gate. Then the investigator and critic agents that adjudicate support claims.}
         \item {Migrated the product from a single EC2 host onto ECS Fargate, then owned that platform and its Terraform for 16 months, running 90\% on Spot.}
         \item {Replaced ECS autoscaling with a queue-depth autoscaler on Lambda that drains workers rather than stopping them, because scale-in kills tasks abruptly and these jobs run from 30 seconds to 2 hours.}
         \item {Traced Aurora MySQL at 100\% CPU to a status broadcast whose query plan examined 7.33M rows per call; dropped the join and throttled it from 1,013 calls to about 100.}
-        \item {Owned credits and billing correctness for a metered LLM product, then designed one authorization architecture to replace its scattered credit checks (4 ADRs, first step shipped).}
-        \item {Wrote the ISO 27001 audit checklist and the risk profiles behind it, then built the disaster recovery and data loss prevention programs to a documented 2-hour RTO and 15-minute RPO.}
+        \item {Owned credits and billing correctness for a metered LLM product, then designed one authorization architecture to replace its scattered credit checks—4 written ADRs, first shipping step merged.}
+        \item {Wrote the ISO 27001 audit checklist and its risk profiles, then built the disaster recovery and data loss prevention programs to a documented 30-minute RTO and 15-minute RPO.}
       \end{cvitems}
     }
 
@@ -37,11 +37,11 @@
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
         \item {Built the real-time order service behind a 100,000 daily-user delivery product, on Node.js and Socket.IO, pushing kitchen preparation, driver pickup and delivery status to mobile and web clients.}
-        \item {Integrated it with the Laravel monolith over SQS, consuming pushed order state changes and fanning them out to subscribed clients.}
+        \item {Decomposed order state out of the Laravel monolith into a standalone Node.js service in an event-driven, service-oriented architecture, exchanging state changes over SQS with a REST API contract for subscribed clients.}
         \item {Served hot order state from Redis as the service's read source with MySQL behind it, keeping status fan-out off the transactional path.}
         \item {Migrated the service from JavaScript to TypeScript.}
-        \item {Led a team of 5 developers in implementing a background location check-in system for the driver app, improving route efficiency.}
-        \item {Increased system observability by adding monitors on main flows using Datadog and OpenTelemetry, which contributed to a 30\% decrease in Mean Time To Resolve.}
+        \item {Led a team of 5 building a background driver location check-in system: planning, reviews and pairing across the driver app, cutting manual check-in overhead from the routing flow.}
+        \item {Instrumented order, driver and kitchen flows with Datadog monitors and OpenTelemetry, cutting Mean Time To Resolve 30\%.}
       \end{cvitems}
     }
 
@@ -69,7 +69,7 @@
       \begin{cvitems} % Description(s) of tasks/responsibilities
         \item {Built software in self-organizing Extreme Programming teams, using TDD, thin vertical slices and test-covered refactoring of legacy code.}
         \item {Developed across React Native for mobile, Ruby on Rails and Java Spring for backend, and React for frontend.}
-        \item {Mentored teams in adopting XP and Agile practices, which shortened delivery cycles and reduced technical debt.}
+        \item {Mentored teams adopting XP and Agile practices: pairing sessions, code review discipline, iterative planning.}
       \end{cvitems}
     }
 
