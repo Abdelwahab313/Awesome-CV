@@ -1,0 +1,63 @@
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Open Source Projects}
+
+% Repo link: upright, accent color, slightly larger than the default 8pt italic
+\newcommand{\projectlink}[1]{{\fontsize{9.5pt}{1em}\bodyfont\upshape\color{awesome}\href{#1}{#1}}}
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {\projectlink{https://github.com/Abdelwahab313/ecs-drain-scaler}} % Job title
+    {ecs-drain-scaler} % Organization
+    {} % Location
+    {2026} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {\textbf{AWS (ECS, SQS), Terraform, Go} — backlog-driven scaling for queue workers on ECS Fargate plus a drain protocol so scale-in can't kill a task mid-job. Scaling policy implemented with tests; design decisions written up as ADRs. Apache-2.0.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {\projectlink{https://github.com/Abdelwahab313/focusflow}} % Job title
+    {focusflow} % Organization
+    {} % Location
+    {2026} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {\textbf{TypeScript, PocketBase, GitHub Actions} — offline-first daily planner and focus timer: plan against a backlog, run focus sessions on one task, review planned vs actual time. Optional sync to a self-hosted PocketBase. MIT.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {\projectlink{https://github.com/Abdelwahab313/handoff-mcp-server}} % Job title
+    {handoff-mcp-server} % Organization
+    {} % Location
+    {2026} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {\textbf{TypeScript, MCP} — MCP server that saves and restores an AI coding agent's task context as a validated briefing between sessions.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {\projectlink{https://github.com/Abdelwahab313/egy-finance-radar}} % Job title
+    {egy-finance-radar} % Organization
+    {} % Location
+    {2026} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {\textbf{Python, PostgreSQL, Next.js} — EGX research tool: fundamentals classification, technical signals and dated recommendations behind a dashboard.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+\end{cventries}

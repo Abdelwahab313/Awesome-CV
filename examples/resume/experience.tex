@@ -12,12 +12,13 @@
 %---------------------------------------------------------
   \cventry
     {Senior Software Engineer} % Job title
-    {OnTheGoSystems} % Organization
+    {OnTheGoSystems (WPML — WordPress plugins)} % Organization
     {Remote (Hong Kong)} % Location
     {Dec. 2024 - Present} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Built the multi-provider translation LLM engine (Bedrock, OpenAI, Gemini) with fallback, JSON repair and rate-limit retries.}
+        \item {Built the multi-provider translation LLM engine behind WPML (Bedrock, OpenAI, Gemini) with fallback, JSON repair and rate-limit retries.}
+        \item {Kept plugin APIs backwards compatible across releases and handled deprecation paths and contract tests.}
         \item {Own an agentic triage platform handling first-line incident and support inquiries, cutting Mean Time To Resolve.}
         \item {Built the guardrails agents run behind: an MCP server exposing live databases, logs and selected APIs through authenticated, monitored access, adopted as the team's standard agent integration path.}
         \item {Migrated the product onto ECS Fargate and have owned the platform and its Terraform.}
@@ -37,8 +38,9 @@
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
         \item {Built the real-time order service behind a 100,000 daily-user delivery product, on Node.js and Socket.IO, pushing kitchen, driver and delivery status to mobile and web clients.}
-        \item {Decomposed the fulfillment component of the system out of the Laravel monolith into a standalone service in an event-driven system, passing state changes over SQS behind a REST API contract.}
-        \item {Served hot order state from Redis with MySQL behind it, keeping status fan-out off the transactional path.}
+        \item {Decomposed the fulfillment component of the system out of the PHP/Laravel monolith into a standalone service in an event-driven system, passing state changes over SQS behind a REST API contract.}
+        \item {Served hot order state from Redis in a write-behind cache pattern with MySQL behind it, keeping status fan-out off the transactional path.}
+        \item {Chose incremental extraction over a full event-driven rewrite: a team of six couldn't freeze features for months to run two partially consistent systems.}
         \item {Led a team of 5 building a driver location check-in system: planning, reviews and pairing across the driver app.}
         \item {Migrated the real-time order service from JavaScript to TypeScript so event and message payload mismatches fail at compile time, not at runtime in front of customers.}
         \item {Instrumented order, driver and kitchen flows with Datadog and OpenTelemetry, cutting Mean Time To Resolve by 30\%.}
