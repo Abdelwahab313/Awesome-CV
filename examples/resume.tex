@@ -20,8 +20,10 @@
 % A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[11pt, a4paper]{awesome-cv}
 
-% Configure page margins with geometry
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+% Configure page margins via geometry
+% Asymmetric right margin gives bullets a ragged-right cushion so wrapped
+% lines don't run into the page edge
+\geometry{left=1.8cm, top=.8cm, right=2.4cm, bottom=1.3cm, footskip=.5cm}
 
 % Empty font directory: Roboto is resolved from the system / TeX installation
 % instead of a bundled fonts/ directory.
@@ -44,6 +46,12 @@
 % Set false if you don't want to highlight section with awesome color
 \setbool{acvSectionColorHighlight}{true}
 
+% Line breaking: allow more flexible word spacing so wrapped lines pad evenly
+\tolerance=1800
+\emergencystretch=3em
+\hyphenpenalty=600
+\exhyphenpenalty=100
+
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
@@ -55,9 +63,9 @@
 % Available options: circle|rectangle,edge/noedge,left/right
 % \photo[rectangle,edge,right]{./examples/profile}
 \name{Abdelwahab}{Mahmoud}
-\position{Senior Software Engineer{\enskip\cdotp\enskip}Backend \& Platform}
+\position{Senior Software Engineer{\enskip\cdotp\enskip}Full-stack \& Platform}
 \address{Cairo, Egypt}
-    
+
 \mobile{+201147784094}
 \email{abdelwahabahmed93@gmail.com}
 \homepage{www.abdelwahab.dev}
@@ -102,6 +110,7 @@
 %-------------------------------------------------------------------------------
 \input{resume/summary.tex}
 \input{resume/experience.tex}
+\newpage
 \input{resume/skills.tex}
 % \input{resume/presentation.tex}
 % \input{resume/writing.tex}
