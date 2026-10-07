@@ -14,18 +14,22 @@
     {Senior Software Engineer} % Job title
     {OnTheGoSystems (WPML — WordPress plugins)} % Organization
     {Remote (Hong Kong)} % Location
-    {Dec. 2024 - Present} % Date(s)
+    {Dec 2024 - Present} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Built the multi-provider translation LLM engine behind WPML (Bedrock, OpenAI, Gemini) with fallback, JSON repair and rate-limit retries.}
-        \item {Kept plugin APIs backwards compatible across releases and handled deprecation paths and contract tests.}
-        \item {Own an agentic triage platform handling first-line incident and support inquiries, cutting Mean Time To Resolve.}
+        % Architecture
+        \item {Built the multi-provider translation LLM engine behind WPML (Bedrock, OpenAI, Gemini): fallback chains, JSON repair and rate-limit retries keep translations flowing when a provider degrades.}
         \item {Built the guardrails agents run behind: an MCP server exposing live databases, logs and selected APIs through authenticated, monitored access, adopted as the team's standard agent integration path.}
-        \item {Migrated the product onto ECS Fargate and have owned the platform and its Terraform.}
-        \item {Owned the GitLab CI pipelines: build, e2e test, SAST, deploy gates for every service in the product.}
+        \item {Owned credits and billing correctness for a metered LLM product; authorization architecture replacing scattered permission checks.}
+        \item {Own an agentic triage platform handling first-line incident and support inquiries, cutting Mean Time To Resolve.}
+        % Reliability
+        \item {Cleared Aurora MySQL's worst-query backlog query by query: rewritten plans, covering indexes and restructured hot reads, until CPU pressure stopped turning into incidents.}
         \item {Replaced ECS autoscaling with a queue-depth Lambda autoscaler that drains long-running jobs instead of killing them.}
-        \item {Kept a running backlog of Aurora MySQL's worst queries and cleared it query by query: rewrote plans, added covering indexes and restructured hot reads until CPU pressure stopped turning into incidents.}
-        \item {Owned credits and billing correctness for a metered LLM product; designed a unified authorization architecture to replace scattered permission checks across services.}
+        % CI/CD \& delivery
+        \item {Owned the GitLab CI/CD pipelines: build, e2e test, SAST and deploy gates for every service in the product.}
+        \item {Kept plugin APIs backwards compatible across releases with deprecation paths and contract tests.}
+        % AWS operations
+        \item {Migrated the product onto AWS ECS Fargate running Docker containers, and own the platform and its Terraform.}
       \end{cvitems}
     }
 
@@ -34,16 +38,20 @@
     {Senior Software Engineer} % Job title
     {Dailymealz} % Organization
     {Riyadh, Saudi Arabia} % Location
-    {Dec. 2021 - Dec. 2024} % Date(s)
+    {Dec 2021 - Dec 2024} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Built the real-time order service behind a 100,000 daily-user delivery product, on Node.js and Socket.IO, pushing kitchen, driver and delivery status to mobile and web clients.}
-        \item {Decomposed the fulfillment component of the system out of the PHP/Laravel monolith into a standalone service in an event-driven system, passing state changes over SQS behind a REST API contract.}
-        \item {Served hot order state from Redis in a write-behind cache pattern with MySQL behind it, keeping status fan-out off the transactional path.}
+        % Scale \& impact
+        \item {Built the real-time order service behind a 100,000 daily-user delivery product: kitchen, driver and delivery status pushed to mobile and web clients over Node.js and Socket.IO.}
+        \item {Cut Mean Time To Resolve by 30\% by instrumenting order, driver and kitchen flows with Datadog and OpenTelemetry.}
+        % Architecture
+        \item {Decomposed the fulfillment component out of the PHP/Laravel monolith into a standalone service in a distributed event-driven architecture, passing state changes over AWS SQS behind a REST API contract.}
         \item {Chose incremental extraction over a full event-driven rewrite: a team of six couldn't freeze features for months to run two partially consistent systems.}
-        \item {Led a team of 5 building a driver location check-in system: planning, reviews and pairing across the driver app.}
+        \item {Served hot order state from Redis in a write-behind cache pattern with MySQL behind it, keeping status fan-out off the transactional path.}
+        % Migration
         \item {Migrated the real-time order service from JavaScript to TypeScript so event and message payload mismatches fail at compile time, not at runtime in front of customers.}
-        \item {Instrumented order, driver and kitchen flows with Datadog and OpenTelemetry, cutting Mean Time To Resolve by 30\%.}
+        % Team leadership
+        \item {Led a team of 5 building a driver location check-in system: planning, reviews and pairing across the driver app.}
       \end{cvitems}
     }
 
@@ -52,11 +60,15 @@
     {Full-Stack Developer} % Job title
     {Nformacy} % Organization
     {Cairo, Egypt} % Location
-    {Oct. 2020 - Dec. 2021} % Date(s)
+    {Oct 2020 - Dec 2021} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Led features from business requirements to deployment, backend and frontend, and moved the web apps to a SaaS model.}
-        \item {Built calendar booking for mentors with Zoom, ClickUp and calendar integrations; wrote BDD tests and managed CI/CD pipelines.}
+        % Product ownership \& SaaS transition
+        \item {Led full-stack features from requirements to deployment, and moved the web apps to a SaaS model.}
+        % Integrations
+        \item {Built mentor calendar booking with Zoom, ClickUp and calendar integrations.}
+        % Delivery
+        \item {Wrote BDD tests and managed CI/CD pipelines.}
       \end{cvitems}
     }
 
@@ -65,7 +77,7 @@
     {Software Engineer} % Job title
     {DevSquads (formerly Fikr Labs)} % Organization
     {Cairo, Egypt} % Location
-    {Jan. 2018 - Oct. 2020} % Date(s)
+    {Jan 2018 - Oct 2020} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
         \item {Built software in self-organizing Extreme Programming teams with TDD, thin vertical slices and test-covered refactoring of legacy code, across React Native, Ruby on Rails, Java Spring and React.}
