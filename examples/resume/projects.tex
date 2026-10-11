@@ -19,19 +19,7 @@
     {2026} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {\textbf{AWS (ECS, SQS), Terraform, Go} — backlog-driven scaling for queue workers on ECS Fargate plus a drain protocol so scale-in can't kill a task mid-job. Scaling policy implemented with tests; design decisions written up as ADRs. Apache-2.0.}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
-  \cventry
-    {\projectlink{https://github.com/Abdelwahab313/focusflow}} % Job title
-    {focusflow} % Organization
-    {} % Location
-    {2026} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {\textbf{TypeScript, PocketBase, GitHub Actions} — offline-first daily planner and focus timer: plan against a backlog, run focus sessions on one task, review planned vs actual time. Optional sync to a self-hosted PocketBase. MIT.}
+        \item {\textbf{AWS (ECS, SQS), Terraform, Go}. Open-sourced the queue-depth autoscaler pattern built at WPML: SQS backlog drives Fargate scale, and a drain protocol keeps scale-in from killing a task mid-job. Chose Lambda over Application Auto Scaling so jobs drain instead of dying; tested, with the trade-offs written up as ADRs. Apache-2.0.}
       \end{cvitems}
     }
 
@@ -43,19 +31,7 @@
     {2026} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {\textbf{TypeScript, MCP} — MCP server that saves and restores an AI coding agent's task context as a validated briefing between sessions.}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
-  \cventry
-    {\projectlink{https://github.com/Abdelwahab313/egy-finance-radar}} % Job title
-    {egy-finance-radar} % Organization
-    {} % Location
-    {2026} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {\textbf{Python, PostgreSQL, Next.js} — EGX research tool: fundamentals classification, technical signals and dated recommendations behind a dashboard.}
+        \item {\textbf{TypeScript, MCP}. MCP server that persists an AI coding agent's task context as a validated briefing, restored on the next session.}
       \end{cvitems}
     }
 

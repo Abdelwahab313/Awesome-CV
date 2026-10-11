@@ -7,9 +7,14 @@
 %-------------------------------------------------------------------------------
 %	CONTENT
 %-------------------------------------------------------------------------------
+% Regular weight + airier leading so the summary doesn't read as a squished
+% Light-font wall; one flowing paragraph, no labels or bold so every word reads
+% as equal.
+\renewcommand{\paragraphstyle}{\fontsize{9.5pt}{1.45em}\bodyfont\upshape\color{darktext}}
+
 \begin{cvparagraph}
 
 %---------------------------------------------------------
-Senior Software / Full-Stack Platform Engineer with 8+ years building and operating AWS production systems: Node.js/TypeScript services, a delivery platform serving 100K daily users, and WPML's LLM translation and agent platform on 1.5M+ WordPress sites. Across the stack: ECS Fargate, Terraform, SQS, CI/CD, Datadog and OpenTelemetry for observability, Aurora, Redis and React. I build the feature, own the platform from architecture through deployment to reliability. Usually the one who finds out why production broke.
+Senior Full Stack Platform Engineer with 8+ years building production systems, the last five on AWS.\\ I design, build and run backend services end to end: Node.js/TypeScript behind a 100K-daily-user delivery product and the LLM translation and agent platform for WPML, on 1.5M+ WordPress sites. The stack is ECS Fargate, Lambda, SQS, DynamoDB and Terraform, with React/Next.js for the interfaces and Aurora and Redis underneath.\\ I take a feature from architecture to deployment to reliability, and teammates count on me when things break.
 %---------------------------------------------------------
 \end{cvparagraph}
