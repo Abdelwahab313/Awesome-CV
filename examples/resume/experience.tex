@@ -1,37 +1,25 @@
-%-------------------------------------------------------------------------------
-%	SECTION TITLE
-%-------------------------------------------------------------------------------
 \cvsection{Work Experience}
 
 
-%-------------------------------------------------------------------------------
-%	CONTENT
-%-------------------------------------------------------------------------------
 \begin{cventries}
 
 %---------------------------------------------------------
   \cventry
     {Senior Software Engineer} % Job title
-    {OnTheGoSystems (WPML — WordPress plugins)} % Organization
-    {Remote (Hong Kong)} % Location
+    {OnTheGoSystems (WPML)} % Organization
+    {Remote} % Location
     {Dec 2024 - Sep 2026} % Date(s)
     {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        % Backend
-        \item {Built the multi-provider translation LLM engine behind WPML (Bedrock, OpenAI, Gemini): fallback chains, JSON repair, rate-limit retries.}
-        \item {Migrated the product to AWS ECS Fargate; own the platform and its Terraform (peak ~100K requests/hour).}
-        \item {Replaced ECS autoscaling with a queue-depth Lambda autoscaler (DynamoDB deployment state store) that drains jobs instead of killing them, sustaining 500K jobs/hour at peak against a ~5K/hour baseline.}
-        % UI
-        \item {Owned WPML's main translations management page in React, delivering the full-featured translation view.}
+      \begin{cvitems}
+        \item {Built WPML's translation platform: a multi-provider LLM engine (Bedrock, OpenAI, Gemini) with fallback chains and JSON repair.}
+        \item {Added a translation-memory RAG (pgvector, HNSW) that reuses near-duplicate translations in OCR detection.}
+        \item {Owned an agentic triage platform for first-line incident and support inquiries, cutting Mean Time To Resolve.}
         \item {Built an MCP server gating live databases, logs and APIs behind authenticated, monitored access.}
-        \item {Owned an agentic triage platform handling first-line incident and support inquiries, cutting Mean Time To Resolve.}
-        % Reliability
-        \item {Cut Aurora MySQL CPU pressure by rewriting hot queries and adding covering indexes.}
-        \item {Fixed database lock contention under concurrent writes with advisory locks and batch-processing rewrites.}
-        % Architecture \& delivery
-        \item {Owned the authorization architecture for a metered LLM product, replacing scattered permission checks.}
-        \item {Owned the GitLab CI/CD pipelines: build, e2e test, SAST and deploy gates for every service in the product.}
-        \item {Kept plugin APIs backwards compatible across releases with deprecation paths and contract tests.}
+        \item {Built a credit-based billing system: a prepaid balance authorized and charged per LLM request, with usage metering.}
+        \item {Replaced ECS autoscaling with a queue-depth Lambda autoscaler that drains jobs (500K jobs/hour peak vs $\sim$5K baseline).}
+        \item {Migrated the product to ECS Fargate and own the platform and its Terraform.}
+        \item {Rewrote concurrency-heavy workers in Go, lifting throughput on high-volume translation jobs.}
+        \item {Owned the GitLab CI/CD pipelines (build, e2e, SAST, deploy) for every service.}
       \end{cvitems}
     }
 
@@ -42,17 +30,13 @@
     {Riyadh, Saudi Arabia} % Location
     {Dec 2021 - Dec 2024} % Date(s)
     {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        % Backend
-        \item {Built the real-time order service behind a 100K daily-user delivery product, pushing status to clients over Node.js and Socket.IO.}
-        \item {Built the fulfillment backend as a standalone Node.js/Express service on AWS SQS, extracted from the PHP/Laravel monolith.}
-        \item {Migrated the real-time order service from JavaScript to TypeScript, so payload mismatches fail at compile time.}
-        \item {Cached hot order state in Redis (write-behind) over MySQL, keeping status fan-out off the transactional path.}
-        \item {Cut Mean Time To Resolve by 30\% by instrumenting order, driver and kitchen flows with Datadog and OpenTelemetry.}
-        % UI
-        \item {Built the React Native mobile apps (kitchen, driver, admin) and maintained the Next.js web app.}
-        % Team
-        \item {Led a team of 5 building a driver location check-in system: planning, reviews and pairing across the driver app.}
+      \begin{cvitems}
+        \item {Built the real-time order service for a 100K daily-user delivery product (Node.js, Socket.IO), caching hot order state in Redis over MySQL.}
+        \item {Built distributed order-fulfillment microservices (orders, kitchen, driver) as standalone Node.js/Express on AWS SQS, extracted from a PHP/Laravel monolith.}
+        \item {Built fleet tracking for live driver locations and check-ins, feeding dispatch; led a team of 5 on the driver app.}
+        \item {Cut Mean Time To Resolve 30\% instrumenting order, driver and kitchen flows with Datadog and OpenTelemetry.}
+        \item {Migrated the order service from JavaScript to TypeScript, so payload mismatches fail at compile time.}
+        \item {Built the React Native apps (kitchen, driver, admin) and maintained the Next.js web app.}
       \end{cvitems}
     }
 
@@ -80,9 +64,8 @@
     {Cairo, Egypt} % Location
     {Jan 2018 - Oct 2020} % Date(s)
     {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
+      \begin{cvitems}
         \item {Built across React Native, Ruby on Rails, Java Spring and React in XP teams using TDD, pairing and thin vertical slices.}
-        \item {Mentored teams adopting XP and Agile practices: pairing, code review discipline, iterative planning.}
       \end{cvitems}
     }
 

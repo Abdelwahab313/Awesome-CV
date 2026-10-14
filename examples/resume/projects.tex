@@ -1,37 +1,31 @@
-%-------------------------------------------------------------------------------
-%	SECTION TITLE
-%-------------------------------------------------------------------------------
 \cvsection{Open Source Projects}
 
-% Repo link: upright, accent color, slightly larger than the default 8pt italic
-\newcommand{\projectlink}[1]{{\fontsize{9.5pt}{1em}\bodyfont\upshape\color{awesome}\href{#1}{#1}}}
+% Name as the entry anchor (linked), accent color
+\newcommand{\projectlink}[2]{{\fontsize{9.5pt}{1em}\bodyfont\upshape\color{awesome}\href{#1}{#2}}}
 
-%-------------------------------------------------------------------------------
-%	CONTENT
-%-------------------------------------------------------------------------------
 \begin{cventries}
 
 %---------------------------------------------------------
   \cventry
-    {\projectlink{https://github.com/Abdelwahab313/ecs-drain-scaler}} % Job title
-    {ecs-drain-scaler} % Organization
-    {} % Location
-    {2026} % Date(s)
+    {\projectlink{https://github.com/Abdelwahab313/ecs-drain-scaler}{ecs-drain-scaler}}
+    {}
+    {}
+    {2026}
     {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {\textbf{AWS (ECS, SQS), Terraform, Go}. Open-sourced the queue-depth autoscaler pattern built at WPML: SQS backlog drives Fargate scale, and a drain protocol keeps scale-in from killing a task mid-job. Chose Lambda over Application Auto Scaling so jobs drain instead of dying; tested, with the trade-offs written up as ADRs. Apache-2.0.}
+      \begin{cvitems}
+        \item {\textbf{AWS (ECS, SQS), Terraform, Go}. Queue-depth autoscaler: SQS backlog drives Fargate scale; a drain protocol keeps scale-in from killing a task mid-job.}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
-    {\projectlink{https://github.com/Abdelwahab313/handoff-mcp-server}} % Job title
-    {handoff-mcp-server} % Organization
-    {} % Location
-    {2026} % Date(s)
+    {\projectlink{https://github.com/Abdelwahab313/handoff-mcp-server}{handoff-mcp-server}}
+    {}
+    {}
+    {2026}
     {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {\textbf{TypeScript, MCP}. MCP server that persists an AI coding agent's task context as a validated briefing, restored on the next session.}
+      \begin{cvitems}
+        \item {\textbf{TypeScript, MCP}. Persists a coding agent's task context as a validated briefing, restored next session.}
       \end{cvitems}
     }
 
